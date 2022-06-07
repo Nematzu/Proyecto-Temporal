@@ -16,19 +16,46 @@
     <main>
     <div class="login-container">
         <div class="login-boxhead">
-            <h1>Iniciar Sesión</h1>
+            <h1>Registrarse</h1>
         </div>
         <div class="login-box">
             <form action="">
-            <label for="">Numero de documento</label>
+                <label>Tipo Documento</label>
+            <select>
+            <option value="null"></option>
+            <option>Cedula Ciudadania</option>
+            <option>Tarjeta de Identidad</option>
+            <option>Pasaporte</option>
+            <option>Cedula Extranjeria</option>
+            <option>Dicker</option>
+            </select>
+            
+            <label for="">Numero Documento</label>
             <input type="text">
+            
+            <label for="">Nombre</label>
+            <input type="text">
+            
+            <label for="">Apellido</label>
+            <input type="text">
+
+            <label for="">Dirección</label>
+            <input type="text">
+            
+            <label for="">Telefono</label>
+            <input type="text">
+
+            <label for="">Correo Electronico</label>
+            <input type="text">
+            
             <label for="">Contraseña</label>
             <input type="password">
+
             <input type="submit" value="Enviar">
         </form>
         </div>
         <p>
-            ¿Nuevo usuario? <a href="registrarse.html"> Crea una cuenta.</a>
+            ¿Ya tienes cuenta? <a href="login.html"> Inicia Sesión.</a>
         </p>
     </div>
     </main>

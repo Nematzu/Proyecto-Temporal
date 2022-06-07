@@ -35,9 +35,6 @@ header{
 }
 
 
-.main{
-
-}
 
 .logo{
     display: flex;
@@ -111,6 +108,8 @@ header{
     left: 60%;
     min-width: auto;
     top: 0%;
+    display: block;
+    margin: auto;
 }
 
 .footer-menu{
