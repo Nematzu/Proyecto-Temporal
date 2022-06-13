@@ -9,8 +9,6 @@ body{
     font-size: 14px;
     line-height: 1.5;
     /* background-color: #f6f8fa; */
-    background: rgb(172,201,235);
-    background: radial-gradient(circle, rgba(172,201,235,1) 0%, rgba(36,41,47,1) 100%);
     color: #57606a;
 }
 

@@ -4,9 +4,13 @@
     margin: 0;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
     /* background-color: #f6f8fa; */
     /* background: rgb(172,201,235);
@@ -26,21 +30,19 @@ header{
     list-style: none;
     /* background-color: #24292f; */
     background-color: transparent;
-    padding: 16px 24px;
+    padding: 1.6rem 2.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
-
-
 
 .logo{
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -50,23 +52,23 @@ header{
 }
 
 .logo img{
-    height: 30px;
-    margin-right: 10px;
+    height: 3.0rem;
+    margin-right: 1.0rem;
 }
 
 .header-menu__item{
     font-weight: 600;
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 1.6rem;
 
 }
 
 .header-menu__item a{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 4px 8px;
+    padding: 0.4rem 0.8rem;
     border: 1px solid white ;
-    border-radius: 6px;
+    border-radius: 0.6rem;
 
     
 }
@@ -80,20 +82,19 @@ header{
     background-color: rgb(255, 255, 255);
     /* background-color: transparent; */
     border: 1px solid white ;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     position: relative;
     /* margin-left: 60px;
     margin-right: 60px; */
-    margin: 40px 60px;
-    margin-top: 20px;
+    margin: 4.0rem 6.0rem;
+    margin-top: 2.0rem;
     /* display: flex;
     justify-content: space-between; */
-
 
 }
 
 .main-box-text{
-    font-size: 62px;
+    font-size: 6.2rem;
     width: 60%;
     padding: 50px;
     line-height: 68px;
@@ -108,19 +109,17 @@ header{
     left: 60%;
     min-width: auto;
     top: 0%;
-    display: block;
-    margin: auto;
 }
 
 .footer-menu{
-    font-size: 12px;
+    font-size: 1.2rem;
     /* background-color: #f6f8fa; */
     background-color: transparent;
 
     line-height: 1.8;
     color: #8193b2;
 
-    margin: 32px 24px;
+    margin: 3.2rem 2.4rem;
 }
 
 .footer-menu a{
