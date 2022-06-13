@@ -126,6 +126,65 @@ width: 100%;
 height: 100%;
 }
 
+/* Inicio CRUDUsuariosAdmin*/
+
+.CRUD-MAIN{
+    display: flex;
+    height: 100%;
+}
+
+.CRUD-sidebar{
+    width: 25%;
+    height: 100%;
+    background-color: #f6f8fa;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.CRUD-sidebar-contenedor{
+    border-style: solid;
+    border-radius: 3px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 30px 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.CRUD-sidebar-contenedor a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #24292f; 
+    vertical-align: middle;
+}
+
+.CRUD-sidebar-contenedor img{
+    height: 60px;
+    vertical-align: middle;
+}
+
+
+.CRUD-sidebar-contenedor a:hover{
+    color: #ffffff;
+}
+
+.CRUD-dashboard{
+    width: 75%;
+    left: 25%;
+    height: 100%;
+    background-color: rgb(146, 220, 220);
+    position: absolute;
+}
+
+/* Fin CRUDUsuariosAdmin*/
+
+
+
 .footer-menu{
     font-size: 12px;
     /* background-color: #f6f8fa; */
