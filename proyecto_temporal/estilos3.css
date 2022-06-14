@@ -135,13 +135,20 @@ height: 100%;
 
 .CRUD-sidebar{
     width: 25%;
-    height: 100%;
-    background-color: #f6f8fa;
+    height: 100vh;
+    background-color: #ffffff;
     position: absolute;
     text-align: center;
     display: flex;
     flex-direction: column;
+    position: relative;
+    border-style: solid;
+    border-radius: 3px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
 }
+
 
 .CRUD-sidebar-contenedor{
     border-style: solid;
@@ -176,11 +183,92 @@ height: 100%;
 .CRUD-dashboard{
     width: 75%;
     left: 25%;
-    height: 100%;
-    background-color: rgb(146, 220, 220);
+    height: 100vh;
+    /* background-color: rgb(146, 220, 220); */
+    background-color: transparent;
     position: absolute;
+    justify-content: center;
+
 }
 
+.CRUD-dashboard-main{
+    /* background-color: #6f93bc; */
+    background-color: #ffffff;
+    width: 95%;
+    margin: 20px auto;
+    padding-bottom: 40px;
+    border-radius: 6px;
+    border-color: #d0d7de;
+    border: solid 1px;
+}
+
+.CRUD-dashboard h1{
+    margin-left: 5%;
+    padding-top:  20px;
+    padding-bottom: 20px;
+    color: #24292f;
+}
+
+.CRUD-dashboard-button{
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+}
+.CRUD-dashboard-button button{
+    padding: 10px;
+    background-color: #2da44e;
+    border-radius: 6px;
+    border:  0px;
+    color: #ffffff;
+}
+
+
+.CRUD-dashboard td, th{
+    border: solid 0.5px black;
+    padding: 10px 1%;
+    
+}
+
+.CRUD-dashboard tr:nth-child(odd){
+    background-color: #d0d7de;
+}
+.CRUD-dashboard tr:nth-child(even){
+    background-color: #f6f8fa;
+}
+
+
+.CRUD-dashboard td button{
+    width: 100%;
+}
+.editar, .eliminar{
+    border: 0px;
+    padding: 6px 0px;
+    color: #ffffff;
+
+}
+.editar{
+    background-color: #3580d6;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.eliminar{
+    background-color: #fd7373;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    
+}
+
+
+.CRUD-dashboard table{
+    border-collapse: collapse ;
+    margin: auto;
+    border-radius: 6px;
+    width: 95%;
+}
+
+.dashboard-table-button{
+    display: flex;
+    justify-content: center;
+}
 /* Fin CRUDUsuariosAdmin*/
 
 
