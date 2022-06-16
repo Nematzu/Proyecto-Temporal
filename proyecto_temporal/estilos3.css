@@ -135,7 +135,7 @@ height: 100%;
 
 .CRUD-sidebar{
     width: 25%;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     position: absolute;
     text-align: center;
@@ -183,7 +183,6 @@ height: 100%;
 .CRUD-dashboard{
     width: 75%;
     left: 25%;
-    height: 100vh;
     /* background-color: rgb(146, 220, 220); */
     background-color: transparent;
     position: absolute;
@@ -202,6 +201,7 @@ height: 100%;
     border: solid 1px;
 }
 
+
 .CRUD-dashboard h1{
     margin-left: 5%;
     padding-top:  20px;
@@ -209,17 +209,136 @@ height: 100%;
     color: #24292f;
 }
 
-.CRUD-dashboard-button{
-    margin-left: 2.5%;
+.CRUD-dashboard-button-contenedor{
     margin-bottom: 10px;
+    margin-left: 2.5%;
 }
-.CRUD-dashboard-button button{
-    padding: 10px;
+
+.CRUD-dashboard-button{
     background-color: #2da44e;
     border-radius: 6px;
     border:  0px;
     color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 16px;
 }
+
+.CRUD-dashboard-button:hover{
+    background-color: #278e45;
+}
+
+#checkbox-editar, #checkbox-registrar{
+    display: none;
+}
+
+.contenedor-cuestionario-registrar{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#checkbox-registrar:checked ~ .contenedor-cuestionario-registrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-cuestionario-editar{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#checkbox-editar:checked ~ .contenedor-cuestionario-editar{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.cuestionario{
+    background-color: #f6f8fa;
+    width: 306px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: #d0d7de;
+
+}
+
+.header-cuestionario-registrar{
+    background-color: #2da44e;
+    font-size: 2.4rem;
+    padding: 16px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: 0px;
+    color: #ffffff;
+}
+
+.header-cuestionario-editar{
+    background-color: #3580d6;
+    font-size: 2.4rem;
+    padding: 16px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: 0px;
+    color: #ffffff;
+}
+
+
+.body-cuestionario{
+    padding: 16px;
+}
+
+.body-cuestionario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.body-cuestionario label{
+margin-bottom: 8px;
+}
+
+.body-cuestionario input{
+    margin-bottom: 16px;
+    padding: 5px 12px;
+    border: 1px solid;
+    border-radius: 6px;
+    border-color: #d0d7de;
+    height: 32px;
+}
+
+
+.footer-cuestionario{
+    display: flex;
+    justify-content:end;
+    border-top: solid 1px;
+    padding-top: 12px;
+}
+
+.footer-cuestionario label{
+    margin-left: 8px;
+}
+
+
 
 
 .CRUD-dashboard td, th{
@@ -236,24 +355,35 @@ height: 100%;
 }
 
 
-.CRUD-dashboard td button{
-    width: 100%;
-}
 .editar, .eliminar{
     border: 0px;
     padding: 6px 0px;
     color: #ffffff;
-
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
 }
 .editar{
     background-color: #3580d6;
     border-bottom-left-radius: 6px;
     border-top-left-radius: 6px;
 }
+
+.editar:hover{
+    background-color: #0f66c9;
+}
+
 .eliminar{
-    background-color: #fd7373;
+    background-color: #ff5151;
     border-bottom-right-radius: 6px;
     border-top-right-radius: 6px;
+    
+}
+
+.eliminar:hover{
+    background-color: #ff2020;
+
     
 }
 

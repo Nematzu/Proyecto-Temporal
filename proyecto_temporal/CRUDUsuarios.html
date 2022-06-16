@@ -27,8 +27,10 @@
         <div class="CRUD-dashboard">
             <div class="CRUD-dashboard-main">
                 <h1>Usuarios</h1>
-                <div class="CRUD-dashboard-button">
-                    <button><b>Crear</b></button>
+                <div class="CRUD-dashboard-button-contenedor">
+                <label for="checkbox-registrar" class="CRUD-dashboard-button">
+                    Registrar
+                </label>
                 </div>
                     <div class="dashboard-table">
                         <table>
@@ -42,19 +44,34 @@
                                 <td>1</td>
                                 <td>Nicolas</td>
                                 <td>2312321</td>
-                                <td><b class="dashboard-table-button"><Button class="editar"><b>Editar</b></Button><button class="eliminar"><b>Eliminar</b></button></td></div>
+                                <td>
+                                    <div class="dashboard-table-button">
+                                        <label for="checkbox-editar" class="editar">Editar</label>
+                                        <label for="" class="eliminar">Eliminar</label>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Juan</td>
                                 <td>666</td>
-                                <td><div class="dashboard-table-button"><Button class="editar"><b>Editar</b></Button><button class="eliminar"><b>Eliminar</b></button></td></div>
+                                <td>
+                                    <div class="dashboard-table-button">
+                                        <label for="checkbox-editar" class="editar">Editar</label>
+                                        <label for="" class="eliminar">Eliminar</label>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Julián</td>
                                 <td>V92301V</td>
-                                <td><div class="dashboard-table-button"><Button class="editar"><b>Editar</b></Button><button class="eliminar"><b>Eliminar</b></button></td></div>
+                                <td>
+                                    <div class="dashboard-table-button">
+                                        <label for="checkbox-editar" class="editar">Editar</label>
+                                        <label for="" class="eliminar">Eliminar</label>
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -72,6 +89,59 @@
         
     </div>
 
+ 
+    
+    <!-- Modulo Crear -->
+    <input type="checkbox" id="checkbox-registrar">
+    <div class="contenedor-cuestionario-registrar">
+        <div class="cuestionario">
+            <div class="header-cuestionario-registrar">
+                Registrar Persona
+            </div>
+            <div class="body-cuestionario">
+                <form action="">
+                    <label for="">Nombre</label>
+                    <input type="text">
+                    <label for="">Clave</label>
+                    <input type="text">
+                    <div class="footer-cuestionario">
+                        <label for="checkbox-registrar" class="CRUD-dashboard-button">
+                            Cancelar
+                        </label>
+                        <label for="checkbox-registrar" class="CRUD-dashboard-button">
+                            Guardar
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modulo Editar -->
+    <input type="checkbox" id="checkbox-editar">
+    <div class="contenedor-cuestionario-editar">
+        <div class="cuestionario">
+            <div class="header-cuestionario-editar">
+                Editar Persona
+            </div>
+            <div class="body-cuestionario">
+                <form action="">
+                    <label for="">Nombre</label>
+                    <input type="text">
+                    <label for="">Clave</label>
+                    <input type="text">
+                    <div class="footer-cuestionario">
+                        <label for="checkbox-editar" class="CRUD-dashboard-button">
+                            Cancelar
+                        </label>
+                        <label for="checkbox-editar" class="CRUD-dashboard-button">
+                            Guardar
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
