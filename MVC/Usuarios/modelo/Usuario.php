@@ -19,6 +19,7 @@ class Usuario extends Conexion{
             $result = $statement->fetch();
             $_SESSION['NOMBRE'] = $result['usua_nombre'];
             $_SESSION['ID'] = $result['usua_codigo'];
+            $_SESSION['ROL'] = $result['usua_rol'];
             return true;
         }
         return false;

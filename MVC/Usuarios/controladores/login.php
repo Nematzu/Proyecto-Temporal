@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Modelo/Usuario.php');
+require_once('../modelo/Usuario.php');
 
 if($_POST){
     $Usuario = $_POST['Usuario'];
@@ -8,7 +8,7 @@ if($_POST){
 
     $Modelo = new Usuario();
     if ($Modelo->login($Usuario, $Password)){
-        header('Location: ../../CRUDUsuarios.php');
+        header('Location: ../../Administrador/vista/CRUDUsuarios.php');
     }else{
         header('Location: ../../login.php');
     }

@@ -19,7 +19,7 @@
             <h1>Iniciar Sesión</h1>
         </div>
         <div class="login-box">
-            <form method="post" action="Usuarios/controladores/login.php">
+            <form method="POST" action="Usuarios/controladores/login.php">
             <label for="">Numero de documento</label>
             <input type="text" name="Usuario">
             <label for="">Contraseña</label>
