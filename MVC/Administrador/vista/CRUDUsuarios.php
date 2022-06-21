@@ -1,8 +1,11 @@
 <?php
 
 require_once('../../Usuarios/modelo/Usuario.php');
+require_once('../../Administrador/modelo/Administrador.php');
 $ModeloUsuarios = new Usuario();
 $ModeloUsuarios->validateSession();
+
+$Modelo = new Administrador();
 
 
 ?>
@@ -43,44 +46,46 @@ $ModeloUsuarios->validateSession();
                     <div class="dashboard-table">
                         <table>
                             <tr>
-                                <th>ID</th>
+                                <th>ID_Admin</th>
+                                <th>Identificacion</th>
+                                <th>Tipo_Identificacion</th>
                                 <th>Nombre</th>
-                                <th>Clave</th>
+                                <th>Apellido</th>
+                                <th>Celular</th>
+                                <th>Direccion</th>
+                                <th>ID_usuario</th>
                                 <th>Acciones</th>
                             </tr>
+                            <?php
+                            $Administradores = $Modelo->get();
+                            if($Administradores != null){
+                            foreach ($Administradores as $Administrador){
+
+                            ?>
                             <tr>
-                                <td>1</td>
-                                <td>Nicolas</td>
-                                <td>2312321</td>
+                                <td><?php echo $Administrador['admin_codigo']?></td>
+                                <td><?php echo $Administrador['admin_identificacion']?></td>
+                                <td><?php echo $Administrador['admin_tipo_identificacion']?></td>
+                                <td><?php echo $Administrador['admin_nombre']?></td>
+                                <td><?php echo $Administrador['admin_apellido']?></td>
+                                <td><?php echo $Administrador['admin_celular']?></td>
+                                <td><?php echo $Administrador['admin_direccion']?></td>
+                                <td><?php echo $Administrador['usua_codigo_fk']?></td>
                                 <td>
                                     <div class="dashboard-table-button">
-                                        <label for="checkbox-editar" class="editar">Editar</label>
-                                        <label for="" class="eliminar">Eliminar</label>
+
+                                    <!-- <label for="checkbox-editar"  class="editar"></label> -->
+                                    <a href="edit.php?admin_codigo=<?php echo $Administrador['admin_codigo']?>" class="editar">Editar</a>
+                                    <a href="delete.php?admin_codigo=<?php echo $Administrador['admin_codigo']?>" class="eliminar">Eliminar</a>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Juan</td>
-                                <td>666</td>
-                                <td>
-                                    <div class="dashboard-table-button">
-                                        <label for="checkbox-editar" class="editar">Editar</label>
-                                        <label for="" class="eliminar">Eliminar</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Julián</td>
-                                <td>V92301V</td>
-                                <td>
-                                    <div class="dashboard-table-button">
-                                        <label for="checkbox-editar" class="editar">Editar</label>
-                                        <label for="" class="eliminar">Eliminar</label>
-                                    </div>
-                                </td>
-                            </tr>
+                            </tr>   
+
+                            <?php
+                            
+                                    }
+                                }
+                            ?>
                         </table>
                     </div>
             </div>
@@ -107,44 +112,26 @@ $ModeloUsuarios->validateSession();
                 Registrar Persona
             </div>
             <div class="body-cuestionario">
-                <form action="">
+                <form method="POST" action="../controladores/add.php">
+
+                    <label for="">Identificacion</label>
+                    <input type="text" name="Identificacion">
+                    <label for="">Tipo_Identificacion</label>
+                    <input type="text" name="Tipo_Identificacion">
                     <label for="">Nombre</label>
-                    <input type="text">
-                    <label for="">Clave</label>
-                    <input type="text">
+                    <input type="text" name="Nombre">
+                    <label for="">Apellido</label>
+                    <input type="text" name="Apellido">
+                    <label for="">Celular</label>
+                    <input type="text" name="Celular">
+                    <label for="">Direccion</label>
+                    <input type="text" name="Direccion">
+
                     <div class="footer-cuestionario">
                         <label for="checkbox-registrar" class="CRUD-dashboard-button">
                             Cancelar
                         </label>
-                        <label for="checkbox-registrar" class="CRUD-dashboard-button">
-                            Guardar
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modulo Editar -->
-    <input type="checkbox" id="checkbox-editar">
-    <div class="contenedor-cuestionario-editar">
-        <div class="cuestionario">
-            <div class="header-cuestionario-editar">
-                Editar Persona
-            </div>
-            <div class="body-cuestionario">
-                <form action="">
-                    <label for="">Nombre</label>
-                    <input type="text">
-                    <label for="">Clave</label>
-                    <input type="text">
-                    <div class="footer-cuestionario">
-                        <label for="checkbox-editar" class="CRUD-dashboard-button">
-                            Cancelar
-                        </label>
-                        <label for="checkbox-editar" class="CRUD-dashboard-button">
-                            Guardar
-                        </label>
+                            <input type="submit" class="CRUD-dashboard-button">
                     </div>
                 </form>
             </div>

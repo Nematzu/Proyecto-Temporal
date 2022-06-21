@@ -11,17 +11,19 @@ class Administrador extends Conexion{
 
     public function add($Identificacion, $tipo_identificacion, $nombre, $apellido, $celular, $direccion){
         $statement = $this->db->prepare("INSERT INTO  administrador (admin_Identificacion, admin_tipo_identificacion, 
-        admin_nombre, admin_apellido, admin_celular, admin_direccion) VALUES (:identificacion, :tipo_identificacion, :nombre, :apellido, :celular, :direccion)");
+        admin_nombre, admin_apellido, admin_celular, admin_direccion) VALUE (:identificacion, :tipo_identificacion, :nombre, :apellido, :celular, :direccion)");
+
         $statement->bindParam(':identificacion', $Identificacion);
         $statement->bindParam(':tipo_identificacion', $tipo_identificacion);
         $statement->bindParam(':nombre', $nombre);
         $statement->bindParam(':apellido', $apellido);
         $statement->bindParam(':celular', $celular);
         $statement->bindParam(':direccion', $direccion);
+
         if($statement->execute()){
-            header('Location ../Pages/index.php');
+            header('Location: ../vista/CRUDUsuarios.php');
         }else{
-            header('Location ../Pages/add.php');
+            header('Location: ../vista/CRUDUsuarios.php');
         }
     }
 
@@ -49,15 +51,15 @@ class Administrador extends Conexion{
     public function update($ID, $Identificacion, $tipo_identificacion, $nombre, $apellido, $celular, $direccion){
         $statement = $this->db->prepare("UPDATE administrador SET admin_identificacion = :identificacion, admin_tipo_identificacion = :tipo_identificacion,
         admin_nombre = :nombre, admin_apellido = :apellido, admin_celular = :celular, admin_direccion = :direccion WHERE admin_codigo =:ID");
-        $statement->bindParam(':identificacion',$Identificacion);
-        $statement->bindParam(':tipo_identificacion',$tipo_identificacion);
-        $statement->bindParam(':nombre',$nombre);
-        $statement->bindParam(':apellido',$apellido);
-        $statement->bindParam(':celular',$celular);
-        $statement->bindParam(':direccion',$direccion);
-        $statement->bindParam(':ID',$ID);
+        $statement->bindParam(':ID', $ID);
+        $statement->bindParam(':identificacion', $Identificacion);
+        $statement->bindParam(':tipo_identificacion', $tipo_identificacion);
+        $statement->bindParam(':nombre', $nombre);
+        $statement->bindParam(':apellido', $apellido);
+        $statement->bindParam(':celular', $celular);
+        $statement->bindParam(':direccion', $direccion);
         if($statement->execute()){
-            header('Location: ../Pages/index.php');
+            header('Location: ../vista/CRUDUsuarios.php');
         }else{
             header('Location: ../Pages/edit.php');
         }
@@ -67,7 +69,7 @@ class Administrador extends Conexion{
         $statement = $this->db->prepare("DELETE FROM administrador WHERE admin_codigo = :ID ");
         $statement->bindParam(':ID',$ID);
         if($statement->execute()){
-            header('Location: ../Pages/index.php');
+            header('Location: ../vista/CRUDUsuarios.php');
         }else{
             header('Location: ../Pages/delete.php');
         }

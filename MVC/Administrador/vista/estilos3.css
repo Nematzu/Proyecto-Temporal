@@ -135,7 +135,7 @@ height: 100%;
 
 .CRUD-sidebar{
     width: 25%;
-    height: 100%;
+    height: auto;
     background-color: #ffffff;
     position: absolute;
     text-align: center;
@@ -216,6 +216,7 @@ height: 100%;
 
 .CRUD-dashboard-button{
     background-color: #2da44e;
+    height: 32px;
     border-radius: 6px;
     border:  0px;
     color: #ffffff;
@@ -223,10 +224,45 @@ height: 100%;
     font-size: 14px;
     font-weight: 700;
     padding: 5px 16px;
+    text-decoration: none;
 }
 
 .CRUD-dashboard-button:hover{
     background-color: #278e45;
+}
+
+.CRUD-dashboard-button-editar{
+    background-color: #3580d6;
+    height: 32px;
+    border-radius: 6px;
+    border:  0px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+.CRUD-dashboard-button-editar:hover{
+    background-color: #0f66c9;
+}
+
+.CRUD-dashboard-button-eliminar{
+    background-color: #ff5151;
+    height: 32px;
+    border-radius: 6px;
+    border:  0px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+.CRUD-dashboard-button-eliminar:hover{
+    background-color: #ff2020;
 }
 
 #checkbox-editar, #checkbox-registrar{
@@ -246,9 +282,15 @@ height: 100%;
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    position: fixed;
 }
 
 #checkbox-registrar:checked ~ .contenedor-cuestionario-registrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-cuestionario-editar{
     opacity: 1;
     visibility: visible;
 }
@@ -266,6 +308,41 @@ height: 100%;
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    position: fixed;
+    vertical-align: middle;
+
+}
+
+.contenedor-cuestionario-editar2{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    vertical-align: middle;
+
+}
+
+.contenedor-cuestionario-eliminar{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    vertical-align: middle;
+
 }
 
 #checkbox-editar:checked ~ .contenedor-cuestionario-editar{
@@ -276,11 +353,13 @@ height: 100%;
 
 .cuestionario{
     background-color: #f6f8fa;
-    width: 306px;
+    width: 331px;
     border: 2px solid;
     border-radius: 6px;
     border-color: #d0d7de;
-
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .header-cuestionario-registrar{
@@ -291,6 +370,8 @@ height: 100%;
     border-top-left-radius: 6px;
     border: 0px;
     color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .header-cuestionario-editar{
@@ -301,17 +382,40 @@ height: 100%;
     border-top-left-radius: 6px;
     border: 0px;
     color: #ffffff;
+    text-decoration: none;
+}
+
+.header-cuestionario-eliminar{
+    background-color: #ff5151;
+    font-size: 2.4rem;
+    padding: 16px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: 0px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-cuestionario-editar a{
+    text-decoration: none;
 }
 
 
 .body-cuestionario{
     padding: 16px;
+
+}
+
+.body-cuestionario h1{
+    text-align: center;
 }
 
 .body-cuestionario form{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+
 }
+
 
 .body-cuestionario label{
 margin-bottom: 8px;
@@ -334,6 +438,8 @@ margin-bottom: 8px;
     padding-top: 12px;
 }
 
+
+
 .footer-cuestionario label{
     margin-left: 8px;
 }
@@ -343,9 +449,10 @@ margin-bottom: 8px;
 
 .CRUD-dashboard td, th{
     border: solid 0.5px black;
-    padding: 10px 1%;
-    
+    padding: 4px;
+
 }
+
 
 .CRUD-dashboard tr:nth-child(odd){
     background-color: #d0d7de;
@@ -393,6 +500,7 @@ margin-bottom: 8px;
     margin: auto;
     border-radius: 6px;
     width: 95%;
+
 }
 
 .dashboard-table-button{
